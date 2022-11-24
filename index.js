@@ -7,9 +7,9 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send(`ABC! This is the homepage on port ${port}`);
+  res.send(`Demo Hệ thống mạng: AWS VPS`);
 });
 
 app.get("/:name", (req, res) => {
-  res.send(`Hello ${req.params.name}`);
+  res.send(`Học viên: ${req.params.name}`);
 });
