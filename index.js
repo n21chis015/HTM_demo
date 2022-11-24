@@ -1,15 +1,20 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+var express = require("express");
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+var app = express();
+
+app.use(express.static("public"));
+
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
+app.listen(3000);
+
+app.get("/", function(request, response)  {
+   
+    response.render("homePage");
 });
 
-app.get("/", (req, res) => {
-  res.send(`Demo Hệ điều hành mạng: AWS VPS`);
-});
-
-app.get("/:name", (req, res) => {
-  res.send(`Học viên: ${req.params.name}`);
+app.get("/test", function(request, response)  {
+   
+    response.render("testPage");
 });
