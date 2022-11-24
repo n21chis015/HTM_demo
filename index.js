@@ -7,7 +7,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send(`Demo Hệ thống mạng: AWS VPS`);
+  res.send(`Demo Hệ điều hành mạng: AWS VPS`);
 });
 
 app.get("/:name", (req, res) => {
